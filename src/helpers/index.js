@@ -35,14 +35,15 @@ const web3Subscribe = async (_network) => {
 				const _startBlock = _currentBlock - 2000;
 				console.log(`New block received. Block #${_currentBlock}`);
 				const _account = "0xba3b264d3B2CD86F752187e5E7022563F72249dA";
-				const _response = await getAccountTxnLists(
-					toChecksumAddress(_account),
-					_startBlock,
-					_currentBlock,
-					"internal"
-				);
-				console.log("_response", _response);
-				console.log("_response.length", _response.length);
+
+				// const _response = await getAccountTxnLists(
+				// 	toChecksumAddress(_account),
+				// 	_startBlock,
+				// 	_currentBlock,
+				// 	"internal"
+				// );
+				// console.log("_response", _response);
+				// console.log("_response.length", _response.length);
 			})
 			.on("error", async (error) => {
 				console.log(error);
